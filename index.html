@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Музыкальная кнопка</title>
+    <style>
+        /* Убираем отступы и делаем кнопку на весь экран */
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            overflow: hidden;
+        }
+        .fullscreen-btn {
+            width: 100vw;
+            height: 100vh;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            font-size: 2rem;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .fullscreen-btn:active {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <button class="fullscreen-btn" onclick="playMusic()">Нажми, чтобы включить музыку</button>
+    
+    <audio id="myAudio" src="output.mp3"></audio>
+
+    <script>
+        function playMusic() {
+            const audio = document.getElementById('myAudio');
+            audio.play();
+        }
+    </script>
+
+</body>
+</html>
